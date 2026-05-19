@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/mdarntl-code/nodejs-hw#readme",
     "dependencies": {
+        "bcrypt": "^6.0.0",
         "celebrate": "^15.0.3",
         "cors": "^2.8.5",
         "dotenv": "^16.4.5",
