@@ -13,16 +13,14 @@ import { errors } from "celebrate";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
-    methods: ["GET", "POST", "PATCH", "DELETE"],
-    origin: "*"
-}));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(logger);
 
-app.use(notesRoutes);
 app.use(authRoutes);
+app.use(notesRoutes);
+
 
 app.use(notFoundHandler);
 app.use(errors());
