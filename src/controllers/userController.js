@@ -11,5 +11,9 @@ export const updateUserAvatar = async(req, res) => {
         returnDocument: "after"
     });
 
+    if (!updatedUser) {
+        throw createHttpError(404, 'User not found');
+    }
+
     res.status(200).json({ url: updatedUser.avatar });
 }
